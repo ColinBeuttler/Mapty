@@ -123,7 +123,7 @@ if (type === 'running'){
  
   const cadence = +inputCadence.value;
   // Check if valid
-  if(!validInputs(distance, duration, cadence) || allPositive(distance, duration, cadence))
+  if(!validInputs(distance, duration, cadence) || !allPositive(distance, duration, cadence))
   return alert('Not a valid number')
   
   workout = new Running([lat, lng], distance, duration, cadence)
